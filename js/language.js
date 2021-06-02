@@ -29,9 +29,11 @@ function findN(){
 }
 
 function FindPoet(findName, poetNames, poetLinks){
+    if (findName.length > 2){
     for (let i = 0; i < poetNames.length; i++){
-        if (poetNames[i].includes(findName)){
-            window.open(poetLinks[i]);
+            if (poetNames[i].includes(findName)){
+                window.open(poetLinks[i]);
+            }
         }
     }
 }
