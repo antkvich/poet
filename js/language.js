@@ -14,3 +14,24 @@ btnRU.addEventListener('click', function (){
     elMain.innerHTML = "Главная";
     elBrand.innerHTML = "Поэты беларуси";
 })
+
+
+function findN(){
+    let poetNames =["Якуб Колас", "Максим Танк", "Кондрат Крапива", "Змитрок Бядуля", "Петрусь Бровка"];
+    let poetLinks =["kolas.html", "tank.html", "krapiva.html", "biadulia.html", "browka.html"];
+
+    let btnF = document.getElementById('findBtn');
+    let name = document.getElementById('text-to-find').value;
+
+
+    btnF.addEventListener('click', FindPoet(name, poetNames, poetLinks));
+    
+}
+
+function FindPoet(findName, poetNames, poetLinks){
+    for (let i = 0; i < poetNames.length; i++){
+        if (poetNames[i].includes(findName)){
+            window.open(poetLinks[i]);
+        }
+    }
+}
